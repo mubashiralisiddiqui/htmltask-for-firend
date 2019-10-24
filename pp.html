@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>Simple Pizza</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="headingConatiner">
+        <h1> PIZZA PALACE </h1>
+        <img src="./images/Pizzapic.jpg" alt="Pizza Order" style="float:medium;" />
+
+        <div>
+            <h3> Please designate the pizza type and the quantity in the boxes below. </h3>
+        </div>
+
+    </div>
+
+
+    <script>
+        var BTN1 = 0;
+        var BTN2 = 0;
+        var BTN3 = 0;
+        var BTN4 = 0;
+        var Delivery = 0;
+        var TakeoutOrDelivery = 'no';
+        var total = 0;
+
+
+    </script>
+
+
+    <div class="bodySection">
+        <input type="text" id="btn1" value="" size="1" align="center" onchange="BTN1= Number(btn1.value); " /> CHEESE
+
+        <input type="text" id="btn2" value="" size="1" align="center" onchange="BTN2= Number(btn2.value); " /> MUSHROOM
+
+        <input type="text" id="btn3" value="" size="1" align="center" onchange="BTN3= Number(btn3.value); " /> SAUSAGE
+
+        <input type="text" id="btn4" value="" size="1" align="center" onchange="BTN4= Number(btn4.value); " /> VEGGIE
+        </br>
+    </div>
+    <h3 align="center"> Choose TAKE OUT or DELIVERY </h3>
+
+    <div class="bodySection">
+
+        <input type="radio" id="T" name="choose" value="" onclick="TakeoutOrDelivery= 'no';" />TAKEOUT
+
+        <input type="radio" id="D" name="choose" value="" onclick="TakeoutOrDelivery= 'yes';
+                    Delivery =  5;" />DELIVERY
+
+    </div>
+    <h3 align="center"> Choose Tip Amount: </h3>
+
+    <div class="bodySection">
+        <input type="radio" id="tip1" name="tip" value="" onclick="TakeoutOrDelivery= 'yes';
+           TIP = Calcu.value /100 * 15;
+                         TIP1 = TIP ; " />
+        15% tip
+
+        <input type="radio" id="tip2" name="tip" value="" />18% tip
+        <input type="radio" id="tip3" name="tip" value="" />20% tip
+        <input type="radio" id="tip4" name="tip" value="" />No Tip
+
+    </div>
+
+    </div>
+    <div class="bodySection">
+        <button id="totalCost" onclick="total = (BTN1*5 + BTN2*10 + BTN3*15 + BTN4*20 + Delivery + TIP1.toFixed(2) ); 
+            Calcu.value = '$' +  total; ">
+            Calculate Total </button>
+    </div>
+    <div class="bodySection">
+        <input style="align-self: center;" type="text" id="Calcu" size="3" value="" readonly />
+    </div>
+
+
+    </div>
+    <!-- <script src="./index.js" /> -->
+</body>
+
+</html>

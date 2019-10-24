@@ -1,0 +1,28 @@
+body {
+    background-color: pink;
+    font-family: optima;
+    color: purple;
+   
+}
+
+p {
+    font-size: 20px
+}
+
+input {
+    font-size: 20px
+}
+.headingConatiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    flex-direction: column;
+}
+.bodySection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    /* flex-direction: column; */
+}
